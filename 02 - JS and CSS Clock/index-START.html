@@ -78,15 +78,18 @@
     function setDate() {
       const now = new Date();
       const hour = now.getHours();
+      const hourDegrees = (hour);
+      hourHand.style.transform = `rotate(${hourDegrees}deg)`;
       const minute = now.getMinutes();
       const minuteDegrees = (minute * 360);
-      
+      minHand.style.transform = `rotate(${minuteDegrees}deg)`;
       const seconds = now.getSeconds();
       const secondsDegrees = ((seconds / 60) * 360);
       secondHand.style.transform = `rotate(${secondsDegrees}deg)`;
 
-      console.log(seconds);
-      console.log(minute);
+      //console.log(seconds);
+      //console.log(minute);
+      console.log(hour);
 
     }
     setInterval(setDate, 1000);
