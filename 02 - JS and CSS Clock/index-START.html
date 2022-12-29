@@ -75,10 +75,15 @@
 
     function setDate() {
       const now = new Date();
+      const hour = now.getHours();
+      const minute = now.getMinutes();
+      const minuteDegrees = (minute * 360);
       const seconds = now.getSeconds();
-      const secondsDegrees = ((seconds / 60) * 360)
+      const secondsDegrees = ((seconds / 60) * 360);
       secondHand.style.transform = `rotate(${secondsDegrees}deg)`;
+
       console.log(seconds);
+
     }
     setInterval(setDate, 1000);
       
